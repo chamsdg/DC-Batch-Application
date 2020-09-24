@@ -22,7 +22,7 @@ def run():
 
     from PIL import Image
     image = Image.open('logo_train-data.png')
-    #image_hospital = Image.open('hospital.jpg')
+    
 
     st.image(image,use_column_width=False)
 
@@ -30,10 +30,8 @@ def run():
     "How would you like to predict?",
     ("Online", "Batch"))
 
-    st.sidebar.info('This app is created to resolve the classification probleme')
+    st.sidebar.info('This app is created to resolve the classification problem')
     st.sidebar.success('https://www.linkedin.com/in/chamsedineaidara')
-    
-    #st.sidebar.image(image_hospital)
 
     st.title("Classification App")
 
@@ -46,7 +44,7 @@ def run():
         if file_upload is not None:
             data = pd.read_csv(file_upload)
             predictions = predict_model(estimator=model,data=data)
-            st.write(predictions)#to have the possibilities to download a csv file
+            st.write(predictions)
             
             
 
