@@ -5,7 +5,7 @@ Created on Wed Sep 23 21:36:59 2020
 @author: Chamsedine
 """
 
-from pycaret.regression import load_model, predict_model
+from pycaret.classification import load_model, predict_model
 import streamlit as st
 import pandas as pd
 import numpy as np
